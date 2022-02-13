@@ -8,18 +8,69 @@ Startseite
 <div class="container">
   <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
-
-
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Build your summary</h1>
-        <p class="lead text-muted">xuxuxu short and leading about the collection below—its contents, the creator,
-          etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-        </p>
+      <div class="row">
+        <div class="col-4">
+          <h3>Relazie your understanding</h3>
+          <h3>Use your understanding</h3>
+          <h3>Test your understanding</h3>
+          <p>
+            Work with text, transcription, RiverAi will help create bullet words, summarize your text and create a
+            visualization landscape
+          </p>
+        </div>
+        <div class="col-6 mx-auto">
+          <img src="{{url_for('static', filename='img_view/front_view_img.jpg')}}" class="img-fluid shadow-none p-3 mb-5 bg-light rounded">
+        </div>
       </div>
-
     </div>
   </div>
+  <div class="container mx-auto">
+    <div class="row d-flex justify-content-between border border-1 p-5 mb-4">
+      <div class="col-6 col-md-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Text summary</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Conlusions</h6>
+          <p class="card-text">Predict output of text.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Bullet words</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Termins</h6>
+          <p class="card-text">Get link to source of knowleage by cliking to word.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Visualizate landscapes</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Graphics</h6>
+          <p class="card-text">Mind maped text to get connection between of word.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto bg-light bg-gradient">
+    <div class="row d-flex align-items-center">
+      <div class="col-6">
+        <h3>What can RIVERAI do for you?</h3>
+        <p class="text-lg-start">- Bullet words.</p>
+        <p class="text-lg-start">- Link knowleage flow.</p>
+        <p class="text-lg-start">- Visualizate buzz words.</p>
+        <button class="btn btn-dark">Get Started</button>
+      </div>
+      <div class="col-4">
+        <img src="{{url_for('static', filename='img_view/front_redy_img.jpg')}}" class="img-fluid p-3 mb-5">
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5" id="get-in">
+    <div class="row d-flex align-items-center justify-content-center">
+      <form method="post" class="col-6">
+        <h2>Get in touch!</h2>
+        <input type="text" name="title" id="title" class="form-control" placeholder="Your Name"><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Your Text"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Send">
+      </form>
+    </div>
+</div>
   {% endblock %}
