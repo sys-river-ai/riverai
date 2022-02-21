@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Startseite
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <h2>Summary of your text</h2>
+  <form method="POST">
+    <div class="input-group py-5">
+      <span class="input-group-text">Your text area</span>
+      <textarea class="form-control" id="user_text" name="user_text" aria-label="With textarea"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Work</button>
+  </form>
+  {% for verb_words in text_verbs %}
+  <div>
+    <a href="/{{verb_words}}">{{ verb_words }}</a> 
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

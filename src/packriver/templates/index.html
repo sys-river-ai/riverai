@@ -9,17 +9,16 @@ Startseite
   <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5">
       <div class="row">
-        <div class="col-4">
-          <h3>Relazie your understanding</h3>
-          <h3>Use your understanding</h3>
-          <h3>Test your understanding</h3>
+        <div class="col-4 mx-auto">
+          <h3><em>Relazie</em> your understanding</h3>
+          <hr>
           <p>
-            Work with text, transcription, RiverAi will help create bullet words, summarize your text and create a
-            visualization landscape
-          </p>
+            River intelligence application will help create for You an understanding from text or transcription. River
+            will help create strategy of knowledge. </p>
         </div>
         <div class="col-6 mx-auto">
-          <img src="{{url_for('static', filename='img_view/front_view_img.jpg')}}" class="img-fluid shadow-none p-3 mb-5 bg-light rounded">
+          <img src="{{url_for('static', filename='img_view/front_view_img.jpg')}}"
+            class="img-fluid shadow-none p-3 mb-5 bg-light rounded">
         </div>
       </div>
     </div>
@@ -30,12 +29,12 @@ Startseite
         <div class="card-body">
           <h5 class="card-title">Text summary</h5>
           <h6 class="card-subtitle mb-2 text-muted">Conlusions</h6>
-          <p class="card-text">Predict output of text.</p>
+          <p class="card-text">Predict of core knowleage from output of text.</p>
         </div>
       </div>
       <div class="col-6 col-md-4" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Bullet words</h5>
+          <h5 class="card-title">Terms words</h5>
           <h6 class="card-subtitle mb-2 text-muted">Termins</h6>
           <p class="card-text">Get link to source of knowleage by cliking to word.</p>
         </div>
@@ -50,19 +49,30 @@ Startseite
     </div>
   </div>
   <div class="container mx-auto bg-light bg-gradient">
-    <div class="row d-flex align-items-center">
+    <div class="row d-flex align-items-center px-3">
       <div class="col-6">
-        <h3>What can RIVERAI do for you?</h3>
-        <p class="text-lg-start">- Bullet words.</p>
-        <p class="text-lg-start">- Link knowleage flow.</p>
-        <p class="text-lg-start">- Visualizate buzz words.</p>
+        <h3>What can River Intelegenc application do for you?</h3>
+        <div class="p-5">
+          <p class="text-lg-start">- Prepare terms explenation.</p>
+          <p class="text-lg-start">- Highlight text components and create list of it.</p>
+          <p class="text-lg-start">- Visualization knowledge links.</p>
+        </div>
+        <p class="text-lg-start">
+          As leagal reader you need understand this leagal text, river intelegent application will
+          help prepare strategy for you to understand your text.
+        </p>
         <button class="btn btn-dark">Get Started</button>
       </div>
       <div class="col-4">
         <img src="{{url_for('static', filename='img_view/front_redy_img.jpg')}}" class="img-fluid p-3 mb-5">
       </div>
     </div>
+    <div class="row">
+      <h2>Flow or working</h2>
+      <img src="{{url_for('static', filename='img_view/screen_1.png')}}" class="img-fluid p-3 mb-5">
+    </div>
   </div>
+
   <div class="container mt-5" id="get-in">
     <div class="row d-flex align-items-center justify-content-center">
       <form method="post" class="col-6">
@@ -72,5 +82,5 @@ Startseite
         <input type="submit" class="btn btn-success" value="Send">
       </form>
     </div>
-</div>
+  </div>
   {% endblock %}
