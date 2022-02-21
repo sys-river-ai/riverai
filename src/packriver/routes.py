@@ -1,4 +1,5 @@
 import spacy
+import PyPDF2
 from spacy.matcher import Matcher
 from packriver import app
 from flask import (render_template, request)
@@ -35,3 +36,18 @@ def summary_demo():
 def term_demo(word):
     info = word
     return render_template("info_term.html", info=info)
+
+@app.route('/upload',  methods=('GET','POST'))
+def upload_pdf():
+    data = []
+    if request.method == 'POST':
+        reader = PyPDF2.PdfFileReader('CELEX 32014L0030 EN TXT.pdf')
+        numOfPages = reader.getNumPages()
+        for i in range(0, numOfPages):
+            print("Page Number: " + str(i))
+            print("- - - - - - - - - - - - - - - - - - - -")
+            pageObj = reader.getPage(i)
+            print(pageObj.extractText())
+            data.append(pageObj.extractText())
+            print("- - - - - - - - - - - - - - - - - - - -")
+    return render_template("upload_pdf.html", data=data)
